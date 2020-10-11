@@ -1,20 +1,20 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Ionic Http Post
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-text></ion-text>
+  <ion-button (click)="saveData()"> Save Data</ion-button>
+  <ion-list *ngFor="let user of userdata" [routerLink]="['/home',user.id]">
+    <ion-item style="color: black;">{{user.first_name}} {{user.last_name}}</ion-item>
+    <ion-button (click)="onDeleteClick(user.id)"></ion-button>
+  </ion-list>
+  <ion-button (click)="getUser()">Get User Details</ion-button>
+  <ion-label>{{dataReturnFromService}}</ion-label>
 </ion-content>
+
+
