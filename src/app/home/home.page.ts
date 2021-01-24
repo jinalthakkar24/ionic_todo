@@ -4,11 +4,11 @@ import { Home } from './home.model';
 import { ActionSheetController, AlertController } from '@ionic/angular';
 import { async } from '@angular/core/testing';
 
-@Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
-})
+// @Component({
+//   selector: 'app-home',
+//   templateUrl: 'home.page.html',
+//   styleUrls: ['home.page.scss'],
+// })
 export class HomePage {
 dataReturnFromService:any="";
 //userdata:any=[];
